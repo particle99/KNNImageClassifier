@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNN Image Classifier</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: sans-serif;
+        }
+        canvas {
+            border: 1px solid #555;
+            cursor: crosshair;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        #output {
+            margin-top: 20px;
+            font-family: monospace;
+            white-space: pre;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>KNN Image Classifier</h1>
+    <p>Click and drag to draw</p>
+    <div class="container">
+        <button id="16x16">16x16</button>
+        <button id="32x32">32x32</button>
+        <button id="48x48">48x48</button>
+    </div>
+    <canvas id="gridCanvas" width="160" height="160" style="margin-bottom: 15px;"></canvas>
+    <div class="container">
+        <button id="classifyImage">Classify</button>
+        <input id="label" placeholder="label" style="width:100px">
+        <button id="guessLabel">Guess class</button>
+        <button id="clearGrid">Clear grid</button>
+    </div>
+
+    <script src="knn.js"></script>
+</body>
+</html>
